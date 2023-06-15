@@ -24,7 +24,7 @@ describe('Testes da função HandlerElephants', () => {
   it('Não passando argumentos a função deve retornar undefined', () => {
     expect(handlerElephants(undefined)).toBeUndefined();
   });
-  
+
   it('Para o argumento popularity deve retornar um número igual ou maior a 5;', () => {
     expect(handlerElephants('popularity')).toBeGreaterThanOrEqual(5);
   });
