@@ -9,7 +9,6 @@ describe('Testes da função HandlerElephants', () => {
     expect(handlerElephants('names')).toContain('Jefferson');
   });
 
-
   it('Para o argumento averageAge deve retornar um número próximo a 10.5', () => {
     expect(handlerElephants('averageAge')).toBe(10.5);
   });
@@ -32,5 +31,7 @@ describe('Testes da função HandlerElephants', () => {
   it('Para o argumento names deve retornar um array com os nomes dos elefantes', () => {
     expect(handlerElephants('names')).toEqual(['Ilana', 'Orval', 'Bea', 'Jefferson']);
   });
- 
+  it('Deve retornar uma mensagem de erro quando o parâmetro não for uma string', () => {
+    expect(handlerElephants(1234)).toBe('Parâmetro inválido, é necessário uma string');
+  });
 });
