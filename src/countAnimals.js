@@ -2,23 +2,18 @@ const data = require('../data/zoo_data');
 
 const countAnimals = (animal) => {
   if (!animal) {
-    const animalCounts = {};
-    data.species.forEach((specie) => {
+    return data.species.reduce((animalCounts, specie) => {
       animalCounts[specie.name] = specie.residents.length;
-    });
-    return animalCounts;
+      return animalCounts;
+    }, {});
   }
-
-  if (!animal.sex) {
-    return data.species.find((specie) => specie.name === animal.species)
-      .residents.length;
+  if (animal.species && !animal.sex) {
+    return data.species
+      .find((specie) => specie.name === animal.species).residents.length;
   }
-
-  const countSexFilter = data.species
+  return data.species
     .find((specie) => specie.name === animal.species)
-    .residents.filter((resident) => resident.sex === animal.sex);
-
-  return countSexFilter.length;
+    .residents.filter((resident) => resident.sex === animal.sex).length;
 };
 
 module.exports = countAnimals;

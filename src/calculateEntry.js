@@ -18,7 +18,6 @@ function calculateEntry(entrants) {
   if (!entrants || entrants.length === 0) {
     return 0;
   }
-
   const total = (countEntrants(entrants)
     .adult * data.prices.adult) + (countEntrants(entrants)
     .senior * data.prices.senior) + (countEntrants(entrants)
