@@ -18,11 +18,12 @@ function calculateEntry(entrants) {
   if (!entrants || entrants.length === 0) {
     return 0;
   }
-  const peopleTotal = countEntrants(entrants);
-  const totalAdult = peopleTotal.adult * data.prices.adult;
-  const totalSenior = peopleTotal.senior * data.prices.senior;
-  const totalChild = peopleTotal.child * data.prices.child;
-  return totalAdult + totalChild + totalSenior;
+
+  const total = (countEntrants(entrants)
+    .adult * data.prices.adult) + (countEntrants(entrants)
+    .senior * data.prices.senior) + (countEntrants(entrants)
+    .child * data.prices.child);
+  return total;
 }
 
 module.exports = { calculateEntry, countEntrants };
