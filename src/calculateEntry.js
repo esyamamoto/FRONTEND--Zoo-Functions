@@ -10,9 +10,9 @@ const countEntrants = (entrants) => {
     } else {
       count.senior += 1;
     }
-    });
-    return count;
-}
+  });
+  return count;
+};
 
 function calculateEntry(entrants) {
   if (!entrants || entrants.length === 0) {
