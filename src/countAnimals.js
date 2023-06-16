@@ -2,9 +2,9 @@ const data = require('../data/zoo_data');
 
 const countAnimals = (animal) => {
   if (!animal) {
-    return data.species.reduce((animalCounts, specie) => {
-      animalCounts[specie.name] = specie.residents.length;
-      return animalCounts;
+    return data.species.reduce((acc, specie) => {
+      acc[specie.name] = specie.residents.length;
+      return acc;
     }, {});
   }
   if (animal.species && !animal.sex) {
