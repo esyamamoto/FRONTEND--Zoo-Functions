@@ -8,17 +8,17 @@ const scheduleDay = (...days) => {
   const schedule = {};
   days.flat() // junta os arrays em um
     .forEach((day) => {
-      if (day !== 'Monday') {
+      if (day === 'Monday') {
+        schedule[day] = {
+          officeHour: 'CLOSED',
+          exhibition: 'The zoo will be closed!',
+        };
+      } else {
         schedule[day] = {
           officeHour: `Open from ${data.hours[day].open}am until ${data.hours[day].close}pm`,
           exhibition: data.species
             .filter(({ availability }) => availability.includes(day))
             .map(({ name }) => name),
-        };
-      } else {
-        schedule[day] = {
-          officeHour: 'CLOSED',
-          exhibition: 'The zoo will be closed!',
         };
       }
     });
