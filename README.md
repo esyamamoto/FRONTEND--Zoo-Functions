@@ -1,10 +1,24 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Boas vindas ao Zoo Functions
+
+<details>
+<summary><strong>👨‍💻 O que foi desenvolvido</strong></summary><br />
+
+Simulacao de um sistema de relatório de um zoológico. O sistema possui informações a respeito dos animais presentes no zoológico, colaboradores, horários de funcionamento e uma tabela de preços que varia de acordo com a idade das pessoas que o visitam.
+
+ </details>
+
+<details>
+  <summary><strong>:memo: Habilidades</strong></summary><br />
+
+  Neste projeto:
+
+- utilizar novas funcionalidades do ES6, como arrow functions, template literals, spread operator, parâmetro rest e object destructuring;
+
+- compor objetos e ler suas informações com diferentes métodos;
+
+- manipular arrays com funções como map, filter e reduce;
+
+- testar suas funções com Jest.
+
+</details>
+
